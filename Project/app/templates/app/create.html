@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'create' %}">Create</a>
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button>Send</button>
+    </form>
+</body>
+</html>

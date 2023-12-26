@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'create' %}">Create</a>
+    </div>
+    {% for item in info %}
+    <p>{{ item.task }}</p>
+    <p>{{ item.data }}</p>
+    <p>{{ item.status }}</p>
+    <div>
+        <a href="{% url 'detail' item.pk %}">Detail</a>
+        <a href="{% url 'create' %}">Create</a>
+    </div>
+
+</body>
+</html>
